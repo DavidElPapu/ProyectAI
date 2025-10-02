@@ -106,10 +106,17 @@ public class MimicStatueAI : MonoBehaviour
     private void Mimic()
     {
         if (meshRenderer.material != mimicMAT)
+        {
             meshRenderer.material = mimicMAT;
-        Vector3 moveDir = playerScript.GetPlayerMoveDirection();
-        Vector3 newDestiny = new Vector3(transform.position.x + moveDir.x, transform.position.y, transform.position.z + moveDir.z);
-        Debug.Log(moveDir);
-        agent.SetDestination(newDestiny);
+            Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+            transform.LookAt(playerPos);
+        }
+        float verticalInput = playerScript.GetPlayerMoveDirection().x;
+        float horizontalInput = playerScript.GetPlayerMoveDirection().z;
+        Vector3 moveDirection = transform.forward * horizontalInput + transform.right * -verticalInput;
+        transform.rotation = Quaternion.Inverse(playerScript.GetPlayerBodyTransform().rotation);
+        //transform.rotation = playerScript.GetPlayerBodyTransform().rotation;
+        agent.Move(moveDirection.normalized * Time.deltaTime * 7f);
+        //agent.SetDestination(newDestiny);
     }
 }

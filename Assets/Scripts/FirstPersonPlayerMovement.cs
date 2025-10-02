@@ -39,7 +39,7 @@ public class FirstPersonPlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
         rb.linearDamping = 5f;
         rb.useGravity = false;
-        playerCamera.transform.parent = transform;
+        //playerCamera.transform.parent = transform;
         playerCamera.position = new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z);
         actions.Gameplay.Shoot.performed += OnShoot;
 
@@ -68,7 +68,12 @@ public class FirstPersonPlayerMovement : MonoBehaviour
 
     public Vector3 GetPlayerMoveDirection()
     {
-        return moveDirection;
+        return new Vector3(horizontalInput, 0, verticalInput);
+    }
+
+    public Transform GetPlayerBodyTransform()
+    {
+        return transform;
     }
 
     private void MovePlayer()
@@ -105,6 +110,7 @@ public class FirstPersonPlayerMovement : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         playerCamera.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        playerCamera.position = new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z);
     }
 
     private void OnShoot(InputAction.CallbackContext context)

@@ -8,9 +8,11 @@ public class StateMachine : MonoBehaviour
     public State initialState;
     public State currentState;
     public List<StateMachineData> context;
+    public Blackboard blackboard = new Blackboard();
 
     private void Start()
     {
+        blackboard.Set(BBKeys.Battery, GameObject.FindGameObjectWithTag("Player"));
         ChangeState(initialState);
     }
 

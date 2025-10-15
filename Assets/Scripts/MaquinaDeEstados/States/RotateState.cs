@@ -8,5 +8,9 @@ public class RotateState : State
     public override void UpdateState(StateMachine stateMachine)
     {
         stateMachine.transform.Rotate(new Vector3(90, 90, 90) * rotationSpeed * Time.deltaTime);
+        if (stateMachine.blackboard.Get<float>(BBKeys.Battery) == default(float))
+        {
+            stateMachine.blackboard.Set(BBKeys.Battery, 100f);
+        }
     }
 }

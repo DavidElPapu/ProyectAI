@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714da66a5d9966c4ea2a5c940f742993, type: 3}
+  m_Name: RoombaClean
+  m_EditorClassIdentifier: 
+  transitions:
+  - condition: {fileID: 11400000, guid: e6084007c5543264ea9b79bdddb5ae4a, type: 2}
+    state: {fileID: 11400000, guid: 94c56733345470245afc08ad64b1f54d, type: 2}
+  - condition: {fileID: 11400000, guid: 105365d5708513c459da14baeb29c12d, type: 2}
+    state: {fileID: 11400000, guid: 441a768c8a065244d9f0bb680462f757, type: 2}
+  speed: 1.5
+  trashCleaningRange: 0.6
+  trashCleaningInterval: 0.1
+  energyConsumtionInterval: 1
+  energyConsumptionAmount: 5
+  trashTag: Trash
+  trashLayer:
+    serializedVersion: 2
+    m_Bits: 1

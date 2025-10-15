@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6004fa88f34ac6a488f08a76d4cc9c20, type: 3}
-  m_Name: CrazyRotateState
+  m_Script: {fileID: 11500000, guid: 6fbd94df34eb87e4ca193bcbf0e14467, type: 3}
+  m_Name: RoutineGoWorkState
   m_EditorClassIdentifier: 
   transitions:
-  - condition: {fileID: 11400000, guid: f79c8c987ad8b9c4093fef92a614dd49, type: 2}
-    state: {fileID: 11400000, guid: e2d646e8145e49b4eb5f21d74c7df99d, type: 2}
-  rotationSpeed: 2
+  - condition: {fileID: 11400000, guid: 6bab40ad42c9e6849b0ad69c68b5f729, type: 2}
+    state: {fileID: 11400000, guid: 11e6dae733c082740afe48957d0ae6bd, type: 2}
+  speed: 4
+  placeName: Work

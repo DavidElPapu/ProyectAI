@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Blackboard : MonoBehaviour
+public class Blackboard
 {
     private Dictionary<int, object> data = new Dictionary<int, object>();
 
     public void Set<T>(int key, T value)
     {
-        data.Add(key, value);
+        data.TryAdd(key, value);
     }
 
     public T Get<T>(int key)
@@ -16,9 +16,4 @@ public class Blackboard : MonoBehaviour
             return (T)value;
         return default(T);
     }
-}
-
-public static class BBKeys
-{
-    public const int Battery = 0;
 }

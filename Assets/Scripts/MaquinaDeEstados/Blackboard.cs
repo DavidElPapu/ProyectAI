@@ -16,4 +16,10 @@ public class Blackboard
             return (T)value;
         return default(T);
     }
+
+    public void ChangeValue<T>(int key, T newValue)
+    {
+        if (data.ContainsKey(key))
+            data[key] = newValue;
+    }
 }

@@ -29,4 +29,7 @@ public static class LnBNPC_BBKeys
     public const int AxeRange = 7;
     public const int NavMeshAgent = 8;
     public const int GlobalTimeScript = 9;
+    public const int HammerHitSpeed = 10;
+    public const int HammerRange = 11;
+    public const int HammerForce = 12;
 }

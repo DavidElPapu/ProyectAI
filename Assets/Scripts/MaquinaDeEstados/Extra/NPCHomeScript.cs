@@ -26,7 +26,7 @@ public class NPCHomeScript : MonoBehaviour
 
     public bool CanBuildHere()
     {
-        if (currentStage >= homeStagesModels.Count)
+        if (currentStage >= (homeStagesModels.Count - 1))
             return false;
         return true;
     }
@@ -56,9 +56,9 @@ public class NPCHomeScript : MonoBehaviour
         {
             homeStagesModels[currentStage - 1].SetActive(false);
             homeStagesModels[currentStage].SetActive(true);
-            NavMeshObstacle newNMO = gameObject.AddComponent<NavMeshObstacle>();
-            newNMO.size = new Vector3(5, 5, 5);
-            newNMO.center = new Vector3(0, 2.5f, 0);
+            //NavMeshObstacle newNMO = gameObject.AddComponent<NavMeshObstacle>();
+            //newNMO.size = new Vector3(5, 5, 5);
+            //newNMO.center = new Vector3(0, 2.5f, 0);
             //newNMO.carving = true;
             if (currentStage == completedStageIndex)
                 OnCompleted();

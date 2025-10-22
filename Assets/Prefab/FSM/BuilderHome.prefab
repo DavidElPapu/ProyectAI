@@ -2056,7 +2056,7 @@ GameObject:
   - component: {fileID: 5638334170162980098}
   - component: {fileID: 1375987855967808980}
   m_Layer: 0
-  m_Name: LumberjackHome
+  m_Name: BuilderHome
   m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2102,8 +2102,8 @@ MonoBehaviour:
   - {fileID: 2754459688390589971}
   - {fileID: 6351724707236567840}
   - {fileID: 3191793284646413092}
-  requiredWoodPerStage: 03000000020000000700000005000000
-  spawnedNPCPrefab: {fileID: 148892006348671977, guid: 73a19b261dbded34ea6b137ca136993e, type: 3}
+  requiredWoodPerStage: 03000000030000000700000005000000
+  spawnedNPCPrefab: {fileID: 148892006348671977, guid: 24bde49da333cff418f7f5015b620982, type: 3}
   completedStageIndex: 2
   currentStage: 0
 --- !u!65 &1375987855967808980
@@ -2775,7 +2775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2233556689807165852
 Transform:
   m_ObjectHideFlags: 0

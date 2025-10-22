@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f2f1ab4a823c24393626ccd9c63319, type: 3}
   m_Name: IsTimeToRest
   m_EditorClassIdentifier: 
-  hour: 21
+  hour: 23
   minutes: 30

@@ -40,14 +40,12 @@ public class RestingState : State
         Vector3 homeInsidePos = stateMachine.blackboard.Get<NPCHomeScript>(LnBNPC_BBKeys.HomeScript).homeInside.position;
         if (Vector3.Distance(npcTransform.position, homeEntrancePos) <= 0.1f)
         {
-            Debug.Log("Llegue a la entrada");
             stateMachine.blackboard.Get<NavMeshAgent>(LnBNPC_BBKeys.NavMeshAgent).isStopped = true;
             npcTransform.position = stateMachine.blackboard.Get<NPCHomeScript>(LnBNPC_BBKeys.HomeScript).homeInside.position;
             return true;
         }
         else if(Vector3.Distance(npcTransform.position, homeInsidePos) <= 0.1f)
         {
-            Debug.Log("Estoy dentro");
             stateMachine.blackboard.Get<NavMeshAgent>(LnBNPC_BBKeys.NavMeshAgent).isStopped = true;
             return true;
         }

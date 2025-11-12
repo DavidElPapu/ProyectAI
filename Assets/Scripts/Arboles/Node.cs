@@ -14,13 +14,14 @@ namespace BehaviourTrees
                 switch (children[currentChild].Process())
                 {
                     case Status.Success:
-                        return Status.Running;
+                        currentChild++;
+                        return currentChild == children.Count ? Status.Success : Status.Running;
                     case Status.Failure:
                         Reset();
                         return Status.Failure;
                     case Status.Running:
-                        currentChild++;
-                        return currentChild == children.Count ? Status.Success : Status.Running;
+                        Reset();
+                        return Status.Running;
                     default:
                         break;
                 }
@@ -35,23 +36,20 @@ namespace BehaviourTrees
         public Selector(string name) : base(name) { }
         public override Status Process()
         {
-            if (currentChild < children.Count)
+            foreach (var child in children)
             {
                 switch (children[currentChild].Process())
                 {
                     case Status.Success:
-                        Reset();
                         return Status.Success;
-                    case Status.Failure:
-                        currentChild++;
-                        return currentChild == children.Count ? Status.Failure : Status.Running;
                     case Status.Running:
                         return Status.Running;
+                    case Status.Failure:
+                        continue;
                     default:
                         break;
                 }
             }
-            Reset();
             return Status.Failure;
         }
     }

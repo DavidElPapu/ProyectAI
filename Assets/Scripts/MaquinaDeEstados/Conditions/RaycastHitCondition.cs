@@ -1,4 +1,5 @@
 using UnityEngine;
+using BJs;
 
 [CreateAssetMenu(fileName = "RaycastHitCondition", menuName = "FSM/Conditions/RaycastHitCondition")]
 public class RaycastHitCondition : Condition

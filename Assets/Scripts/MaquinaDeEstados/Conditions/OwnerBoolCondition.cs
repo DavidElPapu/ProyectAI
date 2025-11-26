@@ -1,4 +1,5 @@
 using UnityEngine;
+using BJs;
 
 [CreateAssetMenu(fileName = "OwnerBoolCondition", menuName = "FSM/Conditions/OwnerBoolCondition")]
 public class OwnerBoolCondition : Condition

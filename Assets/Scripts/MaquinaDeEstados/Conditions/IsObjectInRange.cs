@@ -1,4 +1,5 @@
 using UnityEngine;
+using BJs;
 
 [CreateAssetMenu(fileName = "IsObjectInRangeCondition", menuName = "FSM/Conditions/IsObjectInRangeCondition")]
 public class IsObjectInRange : Condition

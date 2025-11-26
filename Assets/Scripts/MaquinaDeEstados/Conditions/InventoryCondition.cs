@@ -1,4 +1,5 @@
 using UnityEngine;
+using BJs;
 
 [CreateAssetMenu(fileName = "NewInventoryCondition", menuName = "FSM/Conditions/InventoryCondition")]
 public class InventoryCondition : Condition

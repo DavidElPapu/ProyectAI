@@ -1,4 +1,5 @@
 using UnityEngine;
+using BJs;
 
 [CreateAssetMenu(fileName = "IsOnGroundCondition", menuName = "FSM/Conditions/IsOnGroundCondition")]
 public class IsOnGroundCondition : Condition

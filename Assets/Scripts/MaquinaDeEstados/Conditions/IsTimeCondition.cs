@@ -1,4 +1,5 @@
 using UnityEngine;
+using BJs;
 
 [CreateAssetMenu(fileName = "NewIsTimeCondition", menuName = "FSM/Conditions/IsTimeCondition")]
 public class IsTimeCondition : Condition

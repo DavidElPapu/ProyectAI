@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public abstract class Condition : ScriptableObject
+namespace BJs
 {
-    public virtual bool Check(StateMachine stateMachine) { return false; }
-}
+    public abstract class Condition : ScriptableObject
+    {
+        public virtual bool Check(StateMachine stateMachine) { return false; }
+    }
 
-[System.Serializable]
-public class Transition
-{
-    public Condition condition;
-    public State state;
+    [System.Serializable]
+    public class Transition
+    {
+        public Condition condition;
+        public State state;
+    }
 }
